@@ -1,0 +1,33 @@
+android {
+    // ...
+
+    signingConfigs {
+        original {
+            storeFile file("original.keystore")
+            storePassword "originalpassword"
+            keyAlias "originalalias"
+            keyPassword "originalpassword"
+        }
+
+        controller {
+            storeFile file("controller.keystore")
+            storePassword "controllerpassword"
+            keyAlias "controlleralias"
+            keyPassword "controllerpassword"
+        }
+    }
+
+    // ...
+
+    buildTypes {
+        // ...
+
+        release {
+            signingConfig signingConfigs.original
+        }
+
+        controllerRelease {
+            signingConfig signingConfigs.controller
+        }
+    }
+}

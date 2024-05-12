@@ -1,0 +1,20 @@
+  android {
+    defaultConfig {
+        applicationId "com.example.esemptia"
+        // ... otras configuraciones
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        original {
+            dimension "default"
+            applicationIdSuffix= ".original"
+        }
+
+        controller {
+            dimension "default"
+            applicationIdSuffix = ".controller"
+        }
+    }
+}   

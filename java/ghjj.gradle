@@ -1,0 +1,31 @@
+android {
+    // ...
+
+    productFlavors {
+        // ...
+    }
+
+    buildTypes {
+        // ...
+
+        release {
+            // ...
+        }
+
+        controllerRelease {
+            // ...
+        }
+    }
+
+    // ...
+
+    buildVariants {
+        originalRelease {
+            signingConfig signingConfigs.original
+        }
+
+        controllerRelease {
+            signingConfig signingConfigs.controller
+        }
+    }
+}
